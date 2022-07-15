@@ -34,7 +34,7 @@ const registration = async (req, res) => {
             res.status(200).json({message: "Account created", token: token})
         }
         if(checkUser){
-            res.json({message: "User exists"})
+            res.json({message: "User exists", status: 406})
             
         }
     } catch (err){

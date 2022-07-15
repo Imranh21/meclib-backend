@@ -22,10 +22,10 @@ const login = async (req, res) => {
     
                 res.status(200).json({message: "success", token: token})
             } else {
-                res.json({message: "incorrect password"})
+                res.json({message: "incorrect email or password", status: 401})
             }
         } else {
-            res.json({message: "User not found"})
+            res.json({message: "User not found", status: 401})
         } 
         
     } catch (err){
