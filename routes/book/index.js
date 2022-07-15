@@ -13,10 +13,12 @@ const DeleteBookRequest = require('../../controllers/book/deleteBookRequest')
 const UpdateBook = require('../../controllers/book/UpdateBook')
 const UserRequests = require('../../controllers/book/GetUserBookRequest')
 const RequestCheck = require('../../controllers/book/CheckRequest')
+const getUser = require('../../controllers/book/getUser')
 
 
 
 router.get("/book/:id", GetABook)
+router.get("/user/:id", getUser)
 router.delete("/delete-book/:id", DeleteBook)
 router.put("/update-book/:id", UpdateBook)
 router.delete("/delete-request/:id", DeleteBookRequest)
